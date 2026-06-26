@@ -1,5 +1,7 @@
 # Shopify Announcement Bar App (MERN Task)
 
+**Live URL**: [https://future-blink-shopify-app.onrender.com](https://future-blink-shopify-app.onrender.com) (Deploying...)
+
 This application was built as part of the Shopify App Developer Task. It allows merchants to set a floating announcement banner on their storefront from the Shopify Admin.
 
 ## Features
@@ -75,3 +77,20 @@ When recording your Loom demo, ensure you show:
 ## 📧 Submission
 - **Email**: careers@futureblinkmail.xyz
 - **Subject**: Shopify App Developer Task
+
+---
+
+## 🌐 Deployment (Render)
+This project is configured for one-click deployment on Render using the `render.yaml` Blueprint.
+
+1.  **Push to GitHub**: Ensure all changes are pushed to your public repository.
+2.  **Connect to Render**:
+    *   Go to [dashboard.render.com](https://dashboard.render.com).
+    *   Click **New +** and select **Blueprint**.
+    *   Connect your GitHub repository.
+3.  **Set Environment Variables**: Render will prompt you for the following secrets based on the `render.yaml`:
+    *   `SHOPIFY_API_KEY`
+    *   `SHOPIFY_API_SECRET`
+    *   `SHOPIFY_APP_URL` (Use `https://future-blink-shopify-app.onrender.com`)
+    *   `MONGODB_URI` (Your MongoDB connection string)
+4.  **Wait for Build**: Render will use the `Dockerfile` to build and deploy the app.
