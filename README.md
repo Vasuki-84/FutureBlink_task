@@ -1,6 +1,6 @@
 # Shopify Announcement Bar App (MERN Task)
 
-**Live URL**: [https://future-blink-shopify-app.onrender.com](https://future-blink-shopify-app.onrender.com) (Deploying...)
+**Live URL**: [https://future-blink-shopify-app.onrender.com](https://future-blink-shopify-app.onrender.com) (Deployed via Render API)
 
 This application was built as part of the Shopify App Developer Task. It allows merchants to set a floating announcement banner on their storefront from the Shopify Admin.
 
