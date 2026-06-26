@@ -1,0 +1,49 @@
+{% assign announcement = shop.metafields.my_app.announcement %}
+
+{% if announcement != blank %}
+  <div class="future-blink-announcement-bar">
+    <div class="announcement-content">
+      {{ announcement }}
+    </div>
+  </div>
+{% endif %}
+
+<style>
+  .future-blink-announcement-bar {
+    background: {{ block.settings.bg_color }};
+    color: {{ block.settings.text_color }};
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99999;
+    font-family: sans-serif;
+    font-weight: bold;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+  .announcement-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+  }
+  /* Adjust body padding if banner is visible */
+  {% if announcement != blank %}
+  body {
+    padding-top: 40px !important;
+  }
+  {% endif %}
+</style>
+
+{% schema %}
+{
+  "name": "Floating Announcement",
+  "target": "body",
+  "settings": [
+    { "type": "color", "id": "bg_color", "label": "Background Color", "default": "#000000" },
+    { "type": "color", "id": "text_color", "label": "Text Color", "default": "#ffffff" }
+  ]
+}
+{% endschema %}
